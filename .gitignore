@@ -1,5 +1,4 @@
 .idea
-.log
 venv
 /.env
 /.env.prod
