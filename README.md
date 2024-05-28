@@ -54,6 +54,7 @@ python preprocess_data.py
 python train_model.py
 python test_model.py
 todo Описание модели и входных параметров для предсказания здесь.  
+
 ```
 ### 6. Запуск приложения flask 
 
