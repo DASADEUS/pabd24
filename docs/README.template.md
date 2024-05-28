@@ -15,24 +15,30 @@ source venv/bin/activate  # mac or linux
 .\venv\Scripts\activate   # windows
 
 pip install -r requirements.txt
+set PYTHONPATH=C:\Users\Dmiry_Shigarov\PycharmProjects\pabd24
 ```
 
 ## Usage
 
 ### 1. Сбор данных о ценах на недвижимость 
-todo  
+```sh
+mkdir data\raw
+cd src
+python parse_cian.py
+```
 
 ### 2. Выгрузка данных в хранилище S3 
 Для доступа к хранилищу скопируйте файл `.env` в корень проекта.  
 
-todo  
+python upload_to_s3.py
 
 ### 3. Загрузка данных из S3 на локальную машину  
 
-todo  
+python download_from_s3.py
 
 ### 4. Предварительная обработка данных  
-
+mkdir src\log
+mkdir data\proc
 todo 
 
 ### 5. Обучение модели 
