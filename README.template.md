@@ -23,6 +23,7 @@ set PYTHONPATH=C:\Users\Dmiry_Shigarov\PycharmProjects\pabd24
 ## Usage
 
 ### 1. Сбор данных о ценах на недвижимость 
+Запуск парсера 
 ```sh
 mkdir data\raw
 cd src
