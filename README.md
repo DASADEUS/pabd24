@@ -47,10 +47,12 @@ python download_from_s3.py
 ```sh
 mkdir src\log
 mkdir data\proc
-todo 
+python preprocess_data.py
 ```
 ### 5. Обучение модели 
 ```sh
+python train_model.py
+python test_model.py
 todo Описание модели и входных параметров для предсказания здесь.  
 ```
 ### 6. Запуск приложения flask 
