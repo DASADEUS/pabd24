@@ -33,6 +33,9 @@ def main(args):
 
     new_df = new_dataframe[new_dataframe['price'] < 30_000_000]
 
+    # Перемешивание данных
+    new_df = new_df.sample(frac=1).reset_index(drop=True)
+
     border = int(args.split * len(new_df))
     train_df, val_df = new_df[0:border], new_df[border:-1]
     train_df.to_csv(OUT_TRAIN)
