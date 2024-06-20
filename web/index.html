@@ -12,9 +12,9 @@
         <input type="text" id="total_meters" name="total_meters" required>
         <button type="submit">Predict Price</button>
     </form>
-    <div >
-        <p>Результат:</p>
+    <p>Результат:</p>
+    {% if prediction %}
         <p>{{ prediction }}</p>
-    </div>
+    {% endif %}
 </body>
 </html>

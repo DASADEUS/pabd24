@@ -60,6 +60,7 @@ python test_model.py
 ```
 ### 6. Запуск приложения flask 
 Предсказание цены по модели
+web с формой
 ```sh
 python predict_app.py
 ```

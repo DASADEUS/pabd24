@@ -28,13 +28,16 @@ def predict(total_meters: float) -> int:
 def home():
     return render_template('index.html')
 
-@app.route("/predict", methods=['POST'])
+@app.route("/predict", methods=['GET', 'POST'])
 def predict_web_serve():
     """Endpoint to predict house price."""
-    total_meters = float(request.form['total_meters'])
-    price = predict(total_meters)
-    print(price)
-    return render_template('index.html', prediction=f'{price:,} RUB')
+    if request.method == 'POST':
+        total_meters = float(request.form['total_meters'])
+        price = predict(total_meters)
+        return render_template('index.html', prediction=f'Predicted price: {price:,} RUB')
+    else:
+        # Handle GET request, maybe render a form or redirect
+        return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
