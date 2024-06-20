@@ -33,7 +33,8 @@ def predict_web_serve():
     """Endpoint to predict house price."""
     total_meters = float(request.form['total_meters'])
     price = predict(total_meters)
-    return render_template('index.html', prediction=f'Predicted price: {price:,} RUB')
+    print(price)
+    return render_template('index.html', prediction=f'{price:,} RUB')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
