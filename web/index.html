@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="total_meters">Enter total meters:</label>
+        <input type="text" id="total_meters" name="total_meters" required>
+        <button type="submit">Predict Price</button>
+    </form>
+    <div id="prediction"></div>
+</body>
+</html>
