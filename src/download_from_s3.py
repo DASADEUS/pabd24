@@ -21,7 +21,9 @@ client = boto3.client(
 
 def main(args):
     for csv_path in args.input:
+        print(csv_path)
         remote_name = f'{YOUR_ID}/' + csv_path.replace('\\', '/')
+        print(remote_name)
         client.download_file(BUCKET_NAME, remote_name, csv_path)
 
 
